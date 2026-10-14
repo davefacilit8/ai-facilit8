@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ai.facilit8.org/sitemap.xml
