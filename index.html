@@ -141,7 +141,7 @@ header.top { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255
 .disclaimer { font-size: 12.5px; color: var(--muted); max-width: 90ch; margin: 0; }
 
 /* Pricing */
-.tiers { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 32px; }
+.tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 32px; }
 .tier { background: var(--white); border: 1px solid var(--line); border-radius: 18px; padding: clamp(22px, 3vw, 32px); display: flex; flex-direction: column; }
 .tier.feat { border: 2px solid var(--accent); }
 .tier .label { font-size: 13px; font-weight: 700; color: var(--teal); text-transform: uppercase; letter-spacing: 0.08em; }
@@ -149,6 +149,7 @@ header.top { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255
 .tier .size { color: var(--muted); font-size: 14.5px; }
 .price { font-size: 2.3rem; font-weight: 800; letter-spacing: -0.03em; margin: 14px 0 4px; }
 .price small { font-size: 13px; font-weight: 500; color: var(--muted); letter-spacing: 0; }
+.price .vat { display: block; margin-top: 2px; }
 .tier ul { list-style: none; padding: 0; margin: 14px 0 22px; flex: 1; }
 .tier li { padding: 8px 0 8px 24px; border-top: 1px solid var(--line); position: relative; font-size: 15px; color: var(--ink-2); }
 .tier li::before { content: "\2192"; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
@@ -226,7 +227,7 @@ footer a { color: var(--ink-2); }
         <a class="btn" href="https://facilit8.org/?utm_source=ai.facilit8.org&amp;utm_medium=referral&amp;utm_campaign=momentum#contact" data-i18n="ctaMain">Book a 20-minute call</a>
         <a class="btn ghost" href="#how" data-i18n="ctaHow">See how it works</a>
       </div>
-      <p class="meta" data-i18n="heroMeta">Every department, every question, one plan · Fixed price from CHF 7,500</p>
+      <p class="meta" data-i18n="heroMeta">Every department, every question, one plan · Fixed price from CHF 9,500</p>
     </div>
     <div class="converge" aria-hidden="true">
       <span class="q"><b data-i18n="vLegalS">Legal</b><span data-i18n="vLegalQ">Are we compliant?</span></span>
@@ -372,14 +373,14 @@ footer a { color: var(--ink-2); }
 <section id="pricing">
   <div class="container">
     <div class="eyebrow" data-i18n="priceEyebrow">Fixed price</div>
-    <h2 data-i18n="priceH2">One package. Two sizes.</h2>
-    <p class="lead" data-i18n="priceLead">A fixed price, agreed up front, so Finance has one less question.</p>
+    <h2 data-i18n="priceH2">One method. Three levels.</h2>
+    <p class="lead" data-i18n="priceLead">Fixed prices, agreed up front, so Finance has one less question.</p>
     <div class="tiers">
       <article class="tier">
-        <div class="label" data-i18n="t1l">Essential</div>
-        <h3>MOMENTUM</h3>
+        <div class="label" data-i18n="t1l">Silver</div>
+        <h3 data-i18n="t1n">Focused start</h3>
         <div class="size" data-i18n="t1s">Up to 4 departments · typically 30 to 250 employees</div>
-        <div class="price">CHF 7,500 <small data-i18n="vat">excl. VAT</small></div>
+        <div class="price"><span data-i18n="t1p">CHF 9,500</span> <small class="vat" data-i18n="vat">excl. VAT</small></div>
         <ul>
           <li data-i18n="t1a">Sponsor kick-off and survey design</li>
           <li data-i18n="t1b">Anonymous all-staff survey in one language</li>
@@ -388,27 +389,40 @@ footer a { color: var(--ink-2); }
           <li data-i18n="t1e">Up to 4 facilitated department handoffs</li>
           <li data-i18n="t1f">All-staff "You asked" summary</li>
           <li data-i18n="t1g">30-day check-in on actions and owners</li>
+          <li data-i18n="t1h">AI Strategy Framework: one page linking the action plan to priorities, owners and guardrails</li>
         </ul>
-        <a class="btn ghost" href="https://facilit8.org/?utm_source=ai.facilit8.org&amp;utm_medium=referral&amp;utm_campaign=momentum#contact" data-i18n="t1cta">Talk about Essential</a>
+        <a class="btn ghost" href="https://facilit8.org/?utm_source=ai.facilit8.org&amp;utm_medium=referral&amp;utm_campaign=momentum#contact" data-i18n="t1cta">Talk about Silver</a>
       </article>
       <article class="tier feat">
-        <div class="label" data-i18n="t2l">Extended</div>
-        <h3>MOMENTUM</h3>
+        <div class="label" data-i18n="t2l">Gold</div>
+        <h3 data-i18n="t2n">Whole organisation</h3>
         <div class="size" data-i18n="t2s">Up to 7 departments · typically 250 to 1,000 employees</div>
-        <div class="price">CHF 12,500 <small data-i18n="vat">excl. VAT</small></div>
+        <div class="price"><span data-i18n="t2p">CHF 16,500</span> <small class="vat" data-i18n="vat">excl. VAT</small></div>
         <ul>
-          <li data-i18n="t2a">Everything in Essential</li>
+          <li data-i18n="t2a">Everything in Silver</li>
           <li data-i18n="t2b">Survey in up to three languages (DE, FR, EN)</li>
           <li data-i18n="t2c">6 confidential interviews to go deeper</li>
           <li data-i18n="t2d">Up to 7 facilitated department handoffs</li>
           <li data-i18n="t2e">Leadership present-back plus a working session on priorities</li>
           <li data-i18n="t2f">60-day check-in plus a short re-survey to see what moved</li>
         </ul>
-        <a class="btn" href="https://facilit8.org/?utm_source=ai.facilit8.org&amp;utm_medium=referral&amp;utm_campaign=momentum#contact" data-i18n="t2cta">Talk about Extended</a>
+        <a class="btn" href="https://facilit8.org/?utm_source=ai.facilit8.org&amp;utm_medium=referral&amp;utm_campaign=momentum#contact" data-i18n="t2cta">Talk about Gold</a>
+      </article>
+      <article class="tier">
+        <div class="label" data-i18n="t3l">Platinum</div>
+        <h3 data-i18n="t3n">Strategy validated</h3>
+        <div class="size" data-i18n="t3s">250+ employees, multi-site welcome · scope tailored</div>
+        <div class="price"><small data-i18n="from">From</small> <span data-i18n="t3p">CHF 24,500</span> <small class="vat" data-i18n="vat">excl. VAT</small></div>
+        <ul>
+          <li data-i18n="t3a">Everything in Gold</li>
+          <li data-i18n="t3b">AI Strategy Validated: the framework tested against staff responses and confidential interviews, then signed off by leadership in a dedicated session</li>
+          <li data-i18n="t3c">Survey and handoffs scaled to your sites and departments</li>
+        </ul>
+        <a class="btn ghost" href="https://facilit8.org/?utm_source=ai.facilit8.org&amp;utm_medium=referral&amp;utm_campaign=momentum#contact" data-i18n="t3cta">Talk about Platinum</a>
       </article>
     </div>
     <p class="commit" data-i18n="commit"><b>Our one condition:</b> your sponsor attends the leadership present-back and names an owner for every department before we close. Asking people and then not acting does more harm than not asking, so we build the action in from the start.</p>
-    <p class="price-note" data-i18n="priceNote">Fewer than 30 employees, more than 1,000, or several sites? Ask about a compact or tailored version.</p>
+    <p class="price-note" data-i18n="priceNote">Fewer than 30 employees? Ask about a compact version.</p>
   </div>
 </section>
 
@@ -435,7 +449,7 @@ footer a { color: var(--ink-2); }
       <details><summary data-i18n="q2">How much time does it take from our people?</summary><p data-i18n="a2">About 5 minutes for the survey. Leadership spends around 3 hours across kick-off and present-back. Each department handoff takes 60 to 90 minutes.</p></details>
       <details><summary data-i18n="q3">We already have an AI pilot or policy. Is this still useful?</summary><p data-i18n="a3">Especially then. MOMENTUM shows whether people understand and trust what is already in place, and where the pilot needs support to deliver its benefits.</p></details>
       <details><summary data-i18n="q4">Is this just a training needs analysis for HR?</summary><p data-i18n="a4">It includes one, but goes further. Learning needs are one output. The others are the decisions Legal, IT, Finance and the business need to make, with owners.</p></details>
-      <details><summary data-i18n="q5">What happens afterwards?</summary><p data-i18n="a5">Many organisations carry on with the action plan themselves. Others add hands-on AI workshops for teams, or ongoing facilitation for the departments involved. You decide, with no obligation.</p></details>
+      <details><summary data-i18n="q5">What happens afterwards?</summary><p data-i18n="a5">Many organisations carry on with the action plan themselves. Others add hands-on AI workshops for teams, or ongoing facilitation for the departments involved. You decide, with no obligation. Ongoing facilitation and team workshops are available as an optional follow-on to any level.</p></details>
       <details><summary data-i18n="q6">Who runs it?</summary><p data-i18n="a6">David Howes, founder of facilit8, based in Thalwil. He has led more than 100 change and transformation projects across life sciences, consumer and industrial companies, and works in English and German. To protect quality, MOMENTUM runs for no more than two organisations at a time.</p></details>
     </div>
   </div>
@@ -470,7 +484,7 @@ footer a { color: var(--ink-2); }
     heroLead: "In Ihrem Unternehmen hat jede und jeder eine Meinung zu KI: Ängste, Zweifel, Ideen, Forderungen. MOMENTUM sammelt jede Frage, beantwortet sie gemeinsam mit der Abteilung, der sie gehört, und macht aus dem Lärm einen Plan mit machbaren Schritten. Eine KI-Lernbedarfsanalyse, an der Menschen mitwirken, statt dass sie ihnen übergestülpt wird.",
     ctaMain: "20-Minuten-Gespräch buchen",
     ctaHow: "So funktioniert es",
-    heroMeta: "Jede Abteilung, jede Frage, ein Plan · Fixpreis ab CHF 7'500",
+    heroMeta: "Jede Abteilung, jede Frage, ein Plan · Fixpreis ab CHF 9'500",
     vLegalS: "Recht", vLegalQ: "Sind wir compliant?",
     vFinS: "Finanzen", vFinQ: "Was kostet das?",
     vItS: "IT", vItQ: "Sind unsere Daten sicher?",
@@ -544,10 +558,11 @@ footer a { color: var(--ink-2); }
     exA1: "Eine Seite KI-Dos and Don'ts", exO1: "Leitung Recht", exF1: "Entwurf in 2 Wochen",
     exA2: "Regel «menschliche Prüfung» für externe Dokumente", exO2: "Recht + Qualität", exF2: "In der nächsten GL-Sitzung beschliessen",
     priceEyebrow: "Fixpreis",
-    priceH2: "Ein Paket. Zwei Grössen.",
-    priceLead: "Ein Fixpreis, vorab vereinbart. So hat die Finanzabteilung eine Frage weniger.",
-    vat: "zzgl. MWST",
-    t1l: "Essential", t1s: "Bis 4 Abteilungen · typischerweise 30 bis 250 Mitarbeitende",
+    priceH2: "Eine Methode. Drei Stufen.",
+    priceLead: "Festpreise, im Voraus vereinbart, damit Finance eine Frage weniger hat.",
+    vat: "exkl. MWST",
+    from: "Ab",
+    t1l: "Silber", t1n: "Fokussierter Start", t1p: "CHF 9'500", t1s: "Bis 4 Abteilungen · typischerweise 30 bis 250 Mitarbeitende",
     t1g: "Check-in nach 30 Tagen zu Massnahmen und Verantwortlichen",
     t1a: "Kick-off mit dem Sponsor und Umfragedesign",
     t1b: "Anonyme Umfrage für alle Mitarbeitenden in einer Sprache",
@@ -555,16 +570,22 @@ footer a { color: var(--ink-2); }
     t1d: "Präsentation vor der Geschäftsleitung (90 Minuten)",
     t1e: "Bis zu 4 moderierte Abteilungsübergaben",
     t1f: "Zusammenfassung «Sie haben gefragt» für alle",
-    t1cta: "Über Essential sprechen",
-    t2l: "Extended", t2s: "Bis 7 Abteilungen · typischerweise 250 bis 1'000 Mitarbeitende",
-    t2a: "Alles aus Essential",
+    t1h: "KI-Strategierahmen: eine Seite, die den Aktionsplan mit Prioritäten, Verantwortlichen und Leitplanken verbindet",
+    t1cta: "Über Silber sprechen",
+    t2l: "Gold", t2n: "Ganze Organisation", t2p: "CHF 16'500", t2s: "Bis 7 Abteilungen · typischerweise 250 bis 1'000 Mitarbeitende",
+    t2a: "Alles aus Silber",
     t2b: "Umfrage in bis zu drei Sprachen (DE, FR, EN)",
     t2c: "6 vertrauliche Interviews für mehr Tiefe",
     t2d: "Bis zu 7 moderierte Abteilungsübergaben",
     t2e: "Präsentation vor der Geschäftsleitung plus Arbeitssession zu Prioritäten",
     t2f: "Check-in nach 60 Tagen plus kurze Nachbefragung, um zu sehen, was sich bewegt hat",
-    t2cta: "Über Extended sprechen",
-    priceNote: "Weniger als 30 oder mehr als 1'000 Mitarbeitende oder mehrere Standorte? Fragen Sie nach einer kompakten oder individuellen Version.",
+    t2cta: "Über Gold sprechen",
+    t3l: "Platin", t3n: "Strategie validiert", t3s: "Ab 250 Mitarbeitenden, auch mehrere Standorte · Umfang massgeschneidert", t3p: "CHF 24'500",
+    t3a: "Alles aus Gold",
+    t3b: "KI-Strategie validiert: der Rahmen geprüft an Mitarbeitendenantworten und vertraulichen Interviews, anschliessend in einer eigenen Sitzung von der Geschäftsleitung freigegeben",
+    t3c: "Umfrage und Übergaben auf Ihre Standorte und Bereiche abgestimmt",
+    t3cta: "Über Platin sprechen",
+    priceNote: "Weniger als 30 Mitarbeitende? Fragen Sie nach einer kompakten Version.",
     commit: "<b>Unsere einzige Bedingung:</b> Ihr Sponsor nimmt an der Präsentation vor der Geschäftsleitung teil und benennt vor Abschluss für jede Abteilung eine verantwortliche Person. Menschen zu fragen und dann nicht zu handeln, schadet mehr, als nicht zu fragen. Deshalb planen wir das Handeln von Anfang an ein.",
     delEyebrow: "Was bleibt",
     delH2: "Vier Dinge, die Sie in der Woche danach nutzen können",
@@ -584,7 +605,7 @@ footer a { color: var(--ink-2); }
     q4: "Ist das nur eine Schulungsbedarfsanalyse für HR?",
     a4: "Sie ist darin enthalten, geht aber weiter. Lernbedarf ist ein Ergebnis. Die anderen sind die Entscheidungen, die Recht, IT, Finanzen und Fachbereiche treffen müssen, mit klarer Verantwortung.",
     q5: "Was passiert danach?",
-    a5: "Viele Organisationen setzen den Aktionsplan selbst um. Andere ergänzen praktische KI-Workshops für Teams oder eine laufende Moderation für die beteiligten Abteilungen. Sie entscheiden, ohne Verpflichtung.",
+    a5: "Viele Organisationen setzen den Aktionsplan selbst um. Andere ergänzen praktische KI-Workshops für Teams oder eine laufende Moderation für die beteiligten Abteilungen. Sie entscheiden, ohne Verpflichtung. Laufende Moderation und Team-Workshops sind auf jeder Stufe als optionale Fortsetzung möglich.",
     q6: "Wer führt es durch?",
     a6: "David Howes, Gründer von facilit8, mit Sitz in Thalwil. Er hat über 100 Veränderungs- und Transformationsprojekte in Life Sciences, Konsumgüter- und Industrieunternehmen geleitet und arbeitet auf Deutsch und Englisch. Um die Qualität zu sichern, läuft MOMENTUM für höchstens zwei Organisationen gleichzeitig.",
     finalH2: "Bereit, KI in den Griff zu bekommen?",
